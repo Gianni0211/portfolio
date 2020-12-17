@@ -1,30 +1,27 @@
 <template>
   <div id="app">
+    <Home/>
     
-    <div class="">
-  Test
-</div>
   </div>
 </template>
 
 <script>
-
+import Home from '@/views/Home'
 
 export default {
   name: 'App',
   components: {
+    Home
     
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+:root{
+  --main-color: #bfc0c0;
+  --second-color: #2d3142;
+  --third-color: #4f5d75;
+  --accent-color: #ef8354;
 }
 </style>

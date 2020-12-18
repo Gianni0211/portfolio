@@ -1,5 +1,5 @@
 <template>
-  <div class="float-right bg-bar flex justify-center border-bar">
+  <div @mousewheel.prevent="handelScroll" class="float-right bg-bar flex justify-center border-bar">
    <ul class="icon-color flex flex-col justify-around my-36 px-1 ">
     <li id="first" v-bind:class="{active: isOn}">
      <i class="fas fa-home"></i>
@@ -22,25 +22,14 @@ export default {
  name: 'ScrollBar',
  data(){
   return{
-   isOn :false,
-   isUserScrolling: null
-  }
- },
- created(){
-  window.addEventListener('scroll', this.handleScroll);
- },
- destroyed () {
-  window.removeEventListener('scroll', this.handleScroll);
-  },
- methods: {
-  handleScroll(){
-   
-   this.isUserScrolling = (window.scrollY > 0);
-      console.log('calling handleScroll');
    
   }
- }
-}
+ },
+ 
+   
+  }
+ 
+
 </script>
 
 <style scoped>
@@ -50,15 +39,20 @@ export default {
 }
 .icon-color{
  color: var(--accent-color);
+ padding: 3px;
+ transition: 1s;
+ 
 }
 .border-bar{
  border-left: 3px solid var(--accent-color);
  
 }
 
-.active{
- background-color: var(--accent-color);
- color: white;
+li:hover{
+  color: white;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  
 }
 
 </style>

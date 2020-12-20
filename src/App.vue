@@ -4,6 +4,7 @@
     <vue-page-transition >
   <router-view />
 </vue-page-transition>
+
     
   </div>
 </template>
@@ -29,5 +30,9 @@ export default {
 }
 .overlay-left,  .overlay-right,  .overlay-top,  .overlay-bottom   {
     background: var(--third-color) !important;
+}
+.bg-custom{
+ background-color: var(--second-color);
+ height: 100vh;
 }
 </style>

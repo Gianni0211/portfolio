@@ -1,16 +1,22 @@
 <template>
-  <div class="">
-   <h1 class="text-center">About</h1>
+  <div class="bg-custom ">
+
    <ScrollBar/>
+   <div class="h-full flex items-center justify-end mr-24">
+
+   <AboutPar/>
+   </div>
   </div>
 </template>
 
 <script>
+import AboutPar from '../components/AboutPar'
 import ScrollBar from '../components/ScorllBar'
 export default {
  name: 'About',
  components:{
-  ScrollBar
+  ScrollBar,
+  AboutPar
  }
 
 }

@@ -21,9 +21,6 @@ Header
 
 <style scoped>
 
-.bg-custom{
- background-color:white;
- height: 100vh;
-}
+
 
 </style>

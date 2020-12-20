@@ -1,18 +1,18 @@
 <template>
   <div @mousewheel.prevent="handelScroll" class="float-right bg-bar flex justify-center border-bar">
    <ul class="icon-color flex flex-col justify-around my-36 px-1 ">
-    <li id="first" v-bind:class="{active: isOn}">
+    <router-link :to="{name: 'home'}" tag="li">
      <i class="fas fa-home"></i>
-    </li>
-    <li>
+    </router-link>
+    <router-link :to="{name: 'about'}" >
      <i class="far fa-address-card"></i>
-    </li>
-    <li>
+    </router-link>
+    <router-link :to="{name: 'projects'}" tag="li">
      <i class="fas fa-project-diagram"></i>
-    </li>
-    <li>
+    </router-link>
+    <router-link :to="{name: 'contact'}" tag="li">
      <i class="fas fa-file-contract"></i>
-    </li>
+    </router-link>
    </ul>
   </div>
 </template>

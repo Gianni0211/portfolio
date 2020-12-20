@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <Home/>
+
+    <vue-page-transition >
+  <router-view />
+</vue-page-transition>
     
   </div>
 </template>
 
 <script>
-import Home from '@/views/Home'
+
 
 export default {
   name: 'App',
   components: {
-    Home
     
   }
+  
 }
 </script>
 
@@ -23,5 +26,8 @@ export default {
   --second-color: #2d3142;
   --third-color: #4f5d75;
   --accent-color: #ef8354;
+}
+.overlay-left,  .overlay-right,  .overlay-top,  .overlay-bottom   {
+    background: var(--third-color) !important;
 }
 </style>

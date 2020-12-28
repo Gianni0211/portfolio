@@ -1,13 +1,38 @@
 <template>
-  <div class="card ">
+<div>
+  <button @click="modalShow = true" class="card ">
    <img src="../assets/media/airbnb/header.png" alt="">
-  </div>
+  </button>
+  <ProjectModal :value="value" :close="close"  />
+
+</div>
 </template>
 
 <script>
+import ProjectModal from '../components/projectModal.vue';
 export default {
  
- name: 'ProjectCard'
+ name: 'ProjectCard',
+ components: {
+   ProjectModal,
+ },
+ data(){
+   return {
+     value: false,
+     close: false
+   }
+ },
+ watch: {
+   close(){
+    console.log('cambia');
+   }
+ },
+ methods: {
+   showModal: function(){
+     console.log(ProjectModal);
+   }
+ },
+  
 
 }
 </script>

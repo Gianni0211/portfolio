@@ -1,9 +1,9 @@
 <template>
 <div>
-  <button @click="modalShow = true" class="card ">
+  <button @click="showModal" class="card ">
    <img src="../assets/media/airbnb/header.png" alt="">
   </button>
-  <ProjectModal :value="value" :close="close"  />
+  <ProjectModal :value="value" v-on:close="value = false"  />
 
 </div>
 </template>
@@ -22,15 +22,12 @@ export default {
      close: false
    }
  },
- watch: {
-   close(){
-    console.log('cambia');
-   }
- },
+
  methods: {
    showModal: function(){
-     console.log(ProjectModal);
-   }
+     this.value = true;
+   },
+   
  },
   
 

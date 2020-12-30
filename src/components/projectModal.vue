@@ -1,17 +1,19 @@
 <template>
   <div>
-    <t-modal  :value="value" @closed="close"  >
-      <h2 class="text-center my-5">Titolo</h2>
+    <t-modal  
+    :value="value" 
+    @closed="close" 
+    :header="title"
+     >
+      
       <h3 class="my-3">Descrizione:</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque esse perferendis vel consequatur nihil velit ratione ipsa vero excepturi atque assumenda voluptate minima, placeat dolore explicabo dolor sed aspernatur eveniet sit cumque enim nam amet perspiciatis labore? Sint molestiae possimus aspernatur sapiente ducimus ea. Inventore provident dolore hic dicta voluptatem.
+      <p>
+        {{description}}
       </p>
       <h3 class="my-5">Stack:</h3>
-      <ul class="text-center">
-        <li>Vue js</li>
-        <li>Laravel</li>
-        <li>Tailwind</li>
-
-      </ul>
+      <p class="text-center">
+        {{stack}}
+      </p>
     </t-modal>
   </div>
 </template>
@@ -25,6 +27,18 @@ export default {
       type: Boolean,
       default: false
       },
+      'title': {
+        type: String,
+        dafault: ''
+      },
+      'description': {
+        type: String,
+        dafault: ''
+      },
+      'stack': {
+        type: String,
+        dafault: ''
+      }
     
     
   },

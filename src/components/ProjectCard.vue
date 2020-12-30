@@ -1,9 +1,16 @@
 <template>
 <div>
   <button @click="showModal" class="card ">
-   <img src="../assets/media/airbnb/header.png" alt="">
+   <img :src="project.header" alt="">
+   
   </button>
-  <ProjectModal :value="value" v-on:close="value = false"  />
+  <ProjectModal 
+  :value="value" 
+  v-on:close="value = false" 
+  :title="project.title" 
+  :description="project.description"
+  :stack="project.stack"
+    />
 
 </div>
 </template>
@@ -11,7 +18,7 @@
 <script>
 import ProjectModal from '../components/projectModal.vue';
 export default {
- 
+ props : [ 'project'],
  name: 'ProjectCard',
  components: {
    ProjectModal,
@@ -19,9 +26,11 @@ export default {
  data(){
    return {
      value: false,
-     close: false
+     close: false,
+     
    }
  },
+
 
  methods: {
    showModal: function(){

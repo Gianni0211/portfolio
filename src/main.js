@@ -25,7 +25,7 @@ const settings = {
       classes: {
         overlay: 'bg-black',
         wrapper: '',
-        modal: 'bg-white shadow',
+        modal: 'bg-white  shadow',
         body: 'p-3',
         header: 'border-gray-100',
         footer: 'bg-gray-100',

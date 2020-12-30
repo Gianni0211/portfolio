@@ -4,6 +4,7 @@
     :value="value" 
     @closed="close" 
     :header="title"
+    
      >
       
       <h3 class="my-3">Descrizione:</h3>

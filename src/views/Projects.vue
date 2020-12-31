@@ -35,16 +35,19 @@ export default {
     
       },
       presto: {
+        title: 'Presto.it',
         header: require('@/assets/media/presto/presto_header.jpeg'),
         description: 'Sito di annunci tipo subito.it, che offre la possibilità di registrarsi, diventare revisore, aggiungere annunci, ricercare annunci per parola e categoria, aggiungere immagini e da revisore valutare gli annunci con gli score della Google Api.',
         stack: 'Laravel PHP Javascript Bootstrap'
       },
       trovalo: {
+        title: 'Trovalo.it',
         header: require('@/assets/media/trovalo/trovalo-fr-header.png'),
         description: 'Frontend statico di un sito di annunci. Ha un sistema di filtraggio dei prodotti scritto in Javascript',
         stack: 'HTML CSS Javascript Bootstrap'
       },
       blog: {
+        title: 'Blog Ricette',
         header: require('@/assets/media/blog/blog-header.png'),
         description: 'Blog di ricette, che implementa il CRUD in Laravel, con la possibilità di aggiungere like, registrarsi e aggiungere il proprio post',
         stack: 'HTML CSS Javascript Bootstrap Laravel'

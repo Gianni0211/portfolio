@@ -2,9 +2,9 @@
   <div class="bg-custom">
    <ScrollBar/>
    <div class="flex flex-col items-center justify-center h-screen">
-   <h1 class="text-center">Projects</h1>
-   <div class="flex flex-wrap items-center justify-center  ">
-   <ProjectCard v-for="project in projects" :key="project.title" class="m-2"   :project="project" />
+   <h1 class="title">Progetti</h1>
+   <div class="flex flex-wrap items-center w-2/3 justify-center project-container ">
+   <ProjectCard v-for="project in projects" :key="project.title" class="m-1"   :project="project" />
    
 
    </div>
@@ -67,6 +67,12 @@ export default {
 
 </script>
 
-<style>
-
+<style scoped>
+.title{
+  font-family: 'Lora', serif;
+ text-align: center;
+ font-size: 250%;
+ margin-bottom: 60px;
+ color: var(--main-color);
+}
 </style>

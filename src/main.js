@@ -14,9 +14,10 @@ const settings = {
     component: TModal,
     props: {
       fixedClasses: {
-        overlay: 'z-40  overflow-auto scrolling-touch left-0 top-0 bottom-0 right-0 w-full h-full fixed bg-opacity-50',
-        wrapper: 'relative mx-auto z-50 max-w-lg px-3 py-12',
-        modal: 'overflow-visible relative  rounded',
+        overlay: 'z-40  overflow-auto scrolling-touch  left-0 top-0 bottom-0 right-0 w-full h-full fixed bg-opacity-50',
+        wrapper: 'relative mx-auto top-60  w-full h-auto  z-50  px-3 py-12',
+        
+        modal: 'overflow-visible relative h-auto   rounded',
         body: 'p-3',
         header: 'border-b p-3 rounded-t',
         footer: ' p-3 rounded-b',
@@ -38,11 +39,11 @@ const settings = {
         overlayLeaveActiveClass: '',
         overlayLeaveToClass: 'opacity-0 duration-75',
         enterClass: '',
-        enterActiveClass: '',
+        enterActiveClass: ' transition slide-in duration-100',
         enterToClass: '',
-        leaveClass: '',
+        leaveClass: 'transition ease-in opacity-100',
         leaveActiveClass: '',
-        leaveToClass: ''
+        leaveToClass: 'opacity-0 duration-75'
       },
       variants: {
         danger: {

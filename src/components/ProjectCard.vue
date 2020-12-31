@@ -1,6 +1,6 @@
 <template>
 <div>
-  <button @click="showModal" class="card ">
+  <button @click="showModal" class="card md:w-44 w-32  lg:w-80">
    <img :src="project.header" alt="">
    
   </button>
@@ -45,15 +45,14 @@ export default {
 
 <style scoped>
 .card{
- width: 350px;
- height:  200px;
- 
  
  border-radius: 20px;
  transition: .5s;
+ 
 }
+
 .card:hover{
- border: solid 3px var();
+ transform: scale(1.05);
 
 }
 .img-card{

@@ -11,10 +11,8 @@
     :header="title"
     class="text-center"
      >
-      <div class="flex items-center">
-      <div class="w-1/3 h-60 carousel shadow"> 
-        <img v-for="img in imgs" :key="img" :src="img" alt="project image">
-      </div>
+      <div class="flex flex-col md:flex-row items-center">
+      <modal-carousel :images="imgs" class="md:w-1/3 w-full mx-10 carousel"/>
       <div class="w-2/3">
 
       <h3 class="my-3 text-left font-bold">Descrizione:</h3>
@@ -27,12 +25,12 @@
       </p>
       </div>
       </div>
-      <div class="flex justify-center items-center ">
+      <div class="flex justify-center items-center my-5 ">
         <a href="" class="btn mx-10" >
       <span class="arrow"><i class="fas fa-chevron-right"></i></span>
       <span>Vai al sito</span>
         </a>
-        <a href="" class="icon">
+        <a :href="github" class="icon" target="_blank">
           <i class="fab fa-github"></i>
         </a>
       </div>
@@ -44,6 +42,7 @@
 
 <script>
 import {SlideYDownTransition} from 'vue2-transitions'
+import ModalCarousel from './ModalCarousel.vue'
 
 
 export default {
@@ -67,6 +66,10 @@ export default {
       'imgs': {
         type: Array,
         default: null
+      },
+      'github': {
+        type: String,
+        default: ''
       }
     
     
@@ -80,6 +83,7 @@ export default {
  },
  components: {
     SlideYDownTransition,
+    ModalCarousel,
     
    },
 methods: {
@@ -99,14 +103,10 @@ methods: {
 }
 .carousel{
   height: 350px;
-  width: 400px;
-  overflow-x: scroll;
-  margin: 0 50px;
-  @apply flex rounded ;
 }
 .icon{
   color: var(--third-color);
-  font-size: 140%;
+  font-size: 2rem;
   
   transition: .5s;
 }
@@ -124,7 +124,7 @@ methods: {
   
   border: 1px solid black;
   text-transform: uppercase;
-  padding: 10px 40px;
+  padding: 1rem 1.7rem;
   position: relative;
   background: linear-gradient(90deg, var(--second-color) 50%, var(--main-color) 50%);
   background-position: 0px 0px;
@@ -143,4 +143,5 @@ methods: {
 .btn:hover .arrow{
   color: var(--accent-color);
 }
+
 </style>

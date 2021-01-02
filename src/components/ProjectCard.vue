@@ -11,6 +11,7 @@
   :description="project.description"
   :stack="project.stack"
   :imgs="project.imgs"
+  :github="project.github"
     />
 
 </div>

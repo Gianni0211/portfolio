@@ -15,7 +15,7 @@ const settings = {
     props: {
       fixedClasses: {
         overlay: 'z-40 overflow-auto  scrolling-touch  left-0 top-0 bottom-0 right-0 w-full h-full fixed bg-opacity-50',
-        wrapper: 'relative mx-auto top-60 w-full h-auto  z-50  px-3 py-5',
+        wrapper: 'relative mx-auto md:top-56 w-full h-auto  z-50  px-3 py-5',
         
         modal: 'overflow-visible relative h-full   rounded',
         body: 'p-3',

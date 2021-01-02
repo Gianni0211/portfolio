@@ -34,7 +34,8 @@ export default {
         require('@/assets/media/airbnb/airbnb-show.png')
         ],
       description: 'Clone di Airbn con le funzionalità base. Gli utenti si possono registrare, richiedere di diventare Host, se un utente è Host può caricare il suo spazio sulla piattaforma. Tutti gli utenti possono vedere le stanze disponibili, se la stanza è libera, si può prenotare e esite un ricerca per parola, date disponibili e luogo',
-      stack: 'Vue.JS Tailwind Laravel'
+      stack: 'Vue.JS Tailwind Laravel',
+      github: 'https://github.com/Gianni0211/airbnb-clone'
   
     
       },
@@ -46,7 +47,8 @@ export default {
           require('@/assets/media/presto/presto-create.jpeg')
           ],
         description: 'Sito di annunci tipo subito.it, che offre la possibilità di registrarsi, diventare revisore, aggiungere annunci, ricercare annunci per parola e categoria, aggiungere immagini e da revisore valutare gli annunci con gli score della Google Api.',
-        stack: 'Laravel PHP Javascript Bootstrap'
+        stack: 'Laravel PHP Javascript Bootstrap',
+        github: 'https://github.com/Gianni0211/presto.it'
       },
       trovalo: {
         title: 'Trovalo.it',
@@ -56,7 +58,8 @@ export default {
           require('@/assets/media/trovalo/trovalo-category.png')
           ],
         description: 'Frontend statico di un sito di annunci. Ha un sistema di filtraggio dei prodotti scritto in Javascript',
-        stack: 'HTML CSS Javascript Bootstrap'
+        stack: 'HTML CSS Javascript Bootstrap',
+        github: 'https://github.com/Gianni0211/frontend-trovalo.it'
       },
       blog: {
         title: 'Blog Ricette',
@@ -66,7 +69,8 @@ export default {
           require('@/assets/media/blog/blog-registration.png')
           ],
         description: 'Blog di ricette, che implementa il CRUD in Laravel, con la possibilità di aggiungere like, registrarsi e aggiungere il proprio post',
-        stack: 'HTML CSS Javascript Bootstrap Laravel'
+        stack: 'HTML CSS Javascript Bootstrap Laravel',
+        github: 'https://github.com/Gianni0211/blog-ricette'
       },
   }
     

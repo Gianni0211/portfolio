@@ -12,12 +12,10 @@
     class="text-center"
      >
       <div class="flex items-center">
-      <div class="w-1/3 h-60 carousel"> 
-        <img src="https://picsum.photos/900/800" alt="">
-        <img src="https://picsum.photos/900/800" alt="">
-        <img src="https://picsum.photos/900/800" alt="">
+      <div class="w-1/3 h-60 carousel shadow"> 
+        <img v-for="img in imgs" :key="img" :src="img" alt="project image">
       </div>
-      <div>
+      <div class="w-2/3">
 
       <h3 class="my-3 text-left font-bold">Descrizione:</h3>
       <p class="text-left">
@@ -65,6 +63,10 @@ export default {
       'stack': {
         type: String,
         dafault: ''
+      },
+      'imgs': {
+        type: Array,
+        default: null
       }
     
     
@@ -97,9 +99,10 @@ methods: {
 }
 .carousel{
   height: 350px;
+  width: 400px;
   overflow-x: scroll;
   margin: 0 50px;
-  @apply flex rounded;
+  @apply flex rounded ;
 }
 .icon{
   color: var(--third-color);

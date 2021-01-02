@@ -10,6 +10,7 @@
   :title="project.title" 
   :description="project.description"
   :stack="project.stack"
+  :imgs="project.imgs"
     />
 
 </div>

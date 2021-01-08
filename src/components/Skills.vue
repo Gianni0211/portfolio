@@ -1,5 +1,5 @@
 <template>
-  <div class="w-2/3 flex flex-col justify-start items-center container">
+  <div class="w-2/3 flex flex-col justify-start  h-auto items-center container">
    <h1 class="title">Competenze Tecniche</h1>
    <div class="flex skills-container w-full  justify-center">
     <ul class=" w-1/3">
@@ -67,7 +67,7 @@ name: 'Skills'
 <style scoped>
 .container{
    
-   height: 600px;
+   
 }
 
 .skills-container{

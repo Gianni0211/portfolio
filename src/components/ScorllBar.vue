@@ -1,5 +1,6 @@
 <template>
-  <div @mousewheel.prevent="handelScroll" class="float-right bg-bar flex justify-center border-bar">
+  <div 
+   class="float-right bg-bar flex justify-center border-bar">
    <ul class=" flex flex-col justify-around my-36 px-1 ">
     <router-link 
     :to="{name: 'home'}" 

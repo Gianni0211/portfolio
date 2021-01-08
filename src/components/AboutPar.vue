@@ -1,6 +1,6 @@
 <template>
 
-  <div class="w-1/3 ">
+  <div class="w-1/3 container ">
    <h1 class="title">Chi sono?</h1>
    <p class="par">
     Sono un sviluppatore web appassionato di tecnologia, con buone capacità di comunicazione e del lavoro in team, con conoscenze di sviluppo web e programmazione.
@@ -26,6 +26,10 @@ export default {
 </script>
 
 <style scoped>
+.container{
+   margin-right: 30px;
+   height: 600px;
+}
 .title {
  font-family: 'Pacifico', cursive;
  text-align: center;

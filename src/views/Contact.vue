@@ -2,7 +2,7 @@
   <div class="bg-custom">
    
    <ScrollBar/>
-   <div class=" h-full flex flex-col items-center justify-start ">
+   <div class=" h-full flex flex-col items-center justify-start pt-10 ">
      <h1 class="title">Contatti</h1>
      <div class="my-5 flex flex-col items-center">
        <i class="fas fa-phone icons my-5"></i>

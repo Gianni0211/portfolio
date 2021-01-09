@@ -1,6 +1,6 @@
 <template>
 
-  <div class="md:w-1/3 w-full p-3  md:h-auto container order-first md:order-last md:text-xl ">
+  <div class="md:w-1/3 w-full p-3  md:h-auto container order-second md:order-last md:text-xl ">
    <h1 class="title">Chi sono?</h1>
    <p class="par ">
     Sono un sviluppatore web appassionato di tecnologia, con buone capacità di comunicazione e del lavoro in team, con conoscenze di sviluppo web e programmazione.
@@ -35,13 +35,13 @@ export default {
  font-family: 'Pacifico', cursive;
  text-align: center;
  font-size: 2rem;
- margin-bottom: 3rem;
+ margin-bottom: 1.5rem;
  color: var(--main-color);
 }
 .par{
  font-family: 'Lora', serif;
  color: var(--main-color);
- margin-bottom: 20px;
+ margin-bottom: 18px;
  font-size: 85%;
 }
 

@@ -12,6 +12,7 @@
   :stack="project.stack"
   :imgs="project.imgs"
   :github="project.github"
+  :link="project.link"
     />
 
 </div>

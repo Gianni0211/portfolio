@@ -1,6 +1,6 @@
 <template>
   
-    <kinesis-container class="   text-header flex flex-col md:h-full w-full   md:justify-center md:items-center ">
+    <kinesis-container class="   text-header flex flex-col md:h-full md:w-auto w-full     md:justify-center md:items-center ">
       
         <slide-x-left-transition :duration="2000"   >
           <kinesis-element v-show="show"  class="title inline-block " :strength="20">

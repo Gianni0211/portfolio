@@ -1,6 +1,8 @@
 <template>
   <div class="bg-custom">
-   
+   <MobileMenuBtn v-on:open="openMenu" class="absolute" />
+    <MobileMenu :open="isOpen" v-on:close="isOpen = false" />
+    
    <ScrollBar class="hidden md:flex"/>
    <div class=" h-full flex flex-col items-center justify-start pt-10 ">
      <h1 class="title">Contatti</h1>
@@ -23,13 +25,29 @@
 </template>
 
 <script>
+import MobileMenu from '../components/MobileMenu.vue'
+import MobileMenuBtn from '../components/MobileMenuBtn.vue'
 import ScrollBar from '../components/ScorllBar'
 export default {
  name: 'Contact',
  components: {
-  ScrollBar
- }
-
+  ScrollBar,
+  MobileMenu,
+  MobileMenuBtn
+ },
+ 
+data(){
+  return {
+    isOpen : false,
+  }
+},
+methods: {
+  openMenu(){
+    
+    this.isOpen = true;
+    
+  }
+}
 }
 </script>
 

@@ -1,9 +1,11 @@
 <template>
-  <div class="bg-custom">
+  <div class="bg-custom ">
+    <MobileMenuBtn v-on:open="openMenu" class="absolute" />
+    <MobileMenu :open="isOpen" v-on:close="isOpen = false" />
    <ScrollBar class="hidden md:flex"/>
-   <div class="flex flex-col items-center justify-center h-screen">
+   <div class="flex flex-col items-center justify-center ">
    <h1 class="title">Progetti</h1>
-   <div class="flex flex-wrap items-center w-2/3 justify-center project-container ">
+   <div class="flex flex-wrap items-center w-2/3 justify-center project-container  ">
    <ProjectCard v-for="project in projects" :key="project.title" class="m-1"   :project="project" />
    
 
@@ -17,6 +19,8 @@
 </template>
 
 <script>
+import MobileMenu from '../components/MobileMenu.vue';
+import MobileMenuBtn from '../components/MobileMenuBtn.vue';
 import ProjectCard from '../components/ProjectCard.vue'
 
 import ScrollBar from '../components/ScorllBar'
@@ -24,6 +28,7 @@ export default {
  name: 'Projects',
  data(){
    return {
+     isOpen: false,
   projects: {
     
     airbnb: {
@@ -41,7 +46,8 @@ export default {
         ],
       description: 'Clone di Airbn con le funzionalità base. Gli utenti si possono registrare, richiedere di diventare Host, se un utente è Host può caricare il suo spazio sulla piattaforma. Tutti gli utenti possono vedere le stanze disponibili, se la stanza è libera, si può prenotare e esite un ricerca per parola, date disponibili e luogo',
       stack: 'Vue.JS Tailwind Laravel',
-      github: 'https://github.com/Gianni0211/airbnb-clone'
+      github: 'https://github.com/Gianni0211/airbnb-clone',
+      link: ''
   
     
       },
@@ -59,7 +65,8 @@ export default {
           ],
         description: 'Sito di annunci tipo subito.it, che offre la possibilità di registrarsi, diventare revisore, aggiungere annunci, ricercare annunci per parola e categoria, aggiungere immagini e da revisore valutare gli annunci con gli score della Google Api.',
         stack: 'Laravel PHP Javascript Bootstrap',
-        github: 'https://github.com/Gianni0211/presto.it'
+        github: 'https://github.com/Gianni0211/presto.it',
+        link: ''
       },
       trovalo: {
         title: 'Trovalo.it',
@@ -71,7 +78,8 @@ export default {
           ],
         description: 'Frontend statico di un sito di annunci. Ha un sistema di filtraggio dei prodotti scritto in Javascript',
         stack: 'HTML CSS Javascript Bootstrap',
-        github: 'https://github.com/Gianni0211/frontend-trovalo.it'
+        github: 'https://github.com/Gianni0211/frontend-trovalo.it',
+        link: 'https://gianni0211.github.io/frontend-trovalo.it/'
       },
       blog: {
         title: 'Blog Ricette',
@@ -84,7 +92,8 @@ export default {
           ],
         description: 'Blog di ricette, che implementa il CRUD in Laravel, con la possibilità di aggiungere like, registrarsi e aggiungere il proprio post',
         stack: 'HTML CSS Javascript Bootstrap Laravel',
-        github: 'https://github.com/Gianni0211/blog-ricette'
+        github: 'https://github.com/Gianni0211/blog-ricette',
+        link: ''
       },
   }
     
@@ -95,9 +104,15 @@ export default {
  components: {
   ScrollBar,
   ProjectCard,
+  MobileMenuBtn,
+  MobileMenu,
   
  },
- 
+ methods: {
+   openMenu(){
+     this.isOpen = true
+   }
+ }
  }
  
 

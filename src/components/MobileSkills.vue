@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center  ">
+  <div class="text-center  order-last  ">
    <ul class="flex overflow-x-scroll mx-2 ">
     <li title="HTML" class="icon"><i class="fab fa-html5"></i></li>
     <li  class="icon"><i class="fab fa-css3-alt"></i></li>
@@ -32,11 +32,11 @@ name: 'MobileSkills',
 .icon{
  margin-right: 20px;
  color: var(--accent-color);
- font-size: 3rem;
+ font-size: 2rem;
 }
 .arrow{
  color: var(--main-color);
- font-size: 1.5rem;
+ font-size: 1.3rem;
  margin-top: 2px;
 }
 

@@ -1,5 +1,5 @@
 <template>
-<div class="btn-container">
+<div class="md:hidden ">
 
   <button @click="open" >
    <i class="btn p-5 fas fa-bars"></i>

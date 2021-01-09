@@ -26,7 +26,7 @@
       </div>
       </div>
       <div class="flex justify-center items-center my-5 ">
-        <a href="" class="btn mx-10" >
+        <a :href="link" class="btn mx-10" target="_blank" v-if="link !== ''" >
       <span class="arrow"><i class="fas fa-chevron-right"></i></span>
       <span>Vai al sito</span>
         </a>
@@ -68,6 +68,10 @@ export default {
         default: null
       },
       'github': {
+        type: String,
+        default: ''
+      },
+      'link': {
         type: String,
         default: ''
       }

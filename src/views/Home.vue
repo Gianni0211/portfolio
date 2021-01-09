@@ -1,8 +1,8 @@
 <template>
   <div class="bg-custom h-screen   ">
     
-   <MobileMenuBtn v-on:open="openMenu"/>
    <ScrollBar class="hidden md:flex"/>
+   <MobileMenuBtn v-on:open="openMenu" />
    <Header class="p-3 md:p-0  my-auto" />
    <MobileMenu :open="isOpen" v-on:close="isOpen = false"/>
   </div>

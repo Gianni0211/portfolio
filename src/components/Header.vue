@@ -1,8 +1,9 @@
 <template>
   
-    <kinesis-container class=" h-screen bg-header text-header flex flex-col justify-center items-center ">
+    <kinesis-container class="   text-header flex flex-col md:h-full w-full   md:justify-center md:items-center ">
+      
         <slide-x-left-transition :duration="2000"   >
-          <kinesis-element v-show="show"  class="title inline-block" :strength="20">
+          <kinesis-element v-show="show"  class="title inline-block " :strength="20">
             Gianni Mondello
           </kinesis-element>
         </slide-x-left-transition>
@@ -19,13 +20,15 @@
 import { KinesisContainer, KinesisElement} from 'vue-kinesis'
 import { SlideXLeftTransition } from 'vue2-transitions'
 import { ZoomCenterTransition } from 'vue2-transitions'
+
 export default {
  name: 'Header',
  components: {
    KinesisContainer,
    KinesisElement,
    SlideXLeftTransition,
-   ZoomCenterTransition
+   ZoomCenterTransition,
+   
 
  },
  data(){
@@ -42,19 +45,17 @@ export default {
 </script>
 
 <style scoped>
-.bg-header{
-  background-color: var(--second-color);
-}
+
 .text-header{
   color: var(--main-color);
 }
 .title{
   font-family: 'Pacifico', cursive;
-  font-size: 500%;
+  font-size: 400%;
 }
 .sub-title{
   font-family: 'Lora', serif;
-  font-size: 300%;
+  font-size: 200%;
 
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="bg-custom">
-   <ScrollBar/>
+   <ScrollBar class="hidden md:flex"/>
    <div class="flex flex-col items-center justify-center h-screen">
    <h1 class="title">Progetti</h1>
    <div class="flex flex-wrap items-center w-2/3 justify-center project-container ">
